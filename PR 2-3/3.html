@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Biblios/jquery-3.6.3.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        .blocks > div {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+        }
+        .blocks {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="blocks">
+        <div class="one">Aa</div>
+        <div class="two">Aa</div>
+        <div class="three">Aa</div>
+        <div class="one">Aa</div>
+        <div class="two">Aa</div>
+        <div class="three">Aa</div>
+        <div class="one">Aa</div>
+        <div class="two">Aa</div>
+        <div class="three">Aa</div>
+        <div class="one">Aa</div>
+    </div>
+    <button id="btn">Выполнить</button>
+
+    <script>
+        $(document).ready(function () {
+            $('.blocks > div').css('background-color', 'aqua');
+
+            $('#btn').click(function(){
+                $('.two').css('border', '5px double red')
+            });
+        })
+    </script>
+</body>
+</html>

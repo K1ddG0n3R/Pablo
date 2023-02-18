@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Biblios/jquery-3.6.3.min.js"></script>
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        div {
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+
+    <script>
+        $(document).ready(function(){
+            $('.block:nth-child(even)').click(function(){
+                $(this).slideUp();
+            });
+            $('.block:nth-child(odd)').click(function(){
+               $(this).append('<img style="width: 120px; height: 120px;" src="https://images.ctfassets.net/mrop88jh71hl/55rrbZfwMaURHZKAUc5oOW/9e5fe805eb03135b82e962e92169ce6d/python-programming-language.png" />')
+            });
+        });
+    </script>
+</body>
+</html>

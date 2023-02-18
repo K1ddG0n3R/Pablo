@@ -1,0 +1,100 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../Biblios/jquery-3.6.3.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    div {
+        height: 200px;
+        width: 200px;
+        border: 2px solid green;
+        margin: 10px;
+    }
+    body {
+        display: flex;
+        justify-content: space-around;
+    } 
+</style>
+<body>
+    <div class="block1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellat hic veritatis!</p>
+        <button id="btn1">Замена текста</button>
+    </div>
+    <div class="block2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint assumenda cum eius?</p>
+        <button id="btn2">Замена текста</button>
+    </div>
+    <div class="block3"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad, asperiores eos? Id!</p>
+        <button id="btn3">Добавить текст</button>
+    </div>
+    <div class="block4"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis saepe dolorum quas!</p>
+        <button id="btn4">Удалить содержимое</button>
+    </div>
+    <div class="block5"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam ipsa tempore aliquid.</p>
+        <button id="btn5">Удалить блок</button>
+    </div>
+    <div class="block6"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi animi possimus alias.</p>
+        <button id="btn6">Скрыть блок</button>
+    </div>
+    <div class="block7"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt porro qui laboriosam.</p>
+        <button id="btn7">Скрыть блок</button>
+    </div>
+    <div class="block8"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad voluptate maxime similique!</p>
+        <button id="btn8">Изменить цвет</button>
+    </div>
+    <div class="block9"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illo libero totam.</p>
+        <button id="btn9">Убрать обводку</button>
+    </div>
+    <div class="block10"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati molestias sunt fuga.</p>
+    </div>
+
+    <script>
+         $(document).ready(function(){
+
+            $('#btn1').click(function(){
+                $('.block1').text('ytunfcugyjfvbk8gt');
+            });
+
+            $('#btn2').click(function(){
+                $('.block2').html('<p><b>Lorem ipsum dolor</b> sit amet, consecteturi</p>');
+                $('.block2 > p > b').css('color', 'red');
+            });
+
+            $('#btn3').click(function(){
+                $('.block3').append('<p>Lorem ipsum dolor <b>sit amet</b></p>');
+            });
+
+            $('#btn4').click(function(){
+                $('.block4').empty();
+            });
+
+            $('#btn5').click(function(){
+                $('.block5').remove();
+            });
+
+            setTimeout(function(){
+                $('.block6').fadeOut('slow');
+            }, 7000);
+
+            $('#btn7').click(function(){
+                $('.block7').hide(1000, function(){
+                    setTimeout(function(){
+                        $('.block7').show(500);    
+                    }, 4000);        
+                }); 
+            });  
+
+            $('#btn8').click(function(){
+                $('.block8').css('backgroundColor', '#31BEE1');
+                $('.block8').css('fontFamily', 'Arial')
+            });
+
+            $('#btn9').click(function(){
+                $('.block9').css('border', 'white');
+            });         
+        });
+    </script>
+</body>
+</html>

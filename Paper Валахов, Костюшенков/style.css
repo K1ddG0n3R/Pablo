@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    width: 1200px;
+    height: 1800px;
+    margin: 0 auto;
+}
+
+.header_btns {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#chng_color {
+    background-color: rgb(56, 56, 56);
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    min-width: 1200px;
+
+}
+
+.img {
+    width: 1200px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.img>img {
+    width: 1200px;
+}
+
+.block1 {
+    margin: 50px 10px 10px 10px;    
+    display: flex;
+    justify-content: space-between;
+}
+
+.pic {
+    background-color: rgba(220, 20, 60, 0.453);
+    width: 250px;   
+}
+
+.image {
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.image>img {
+    width: 250px;
+}
+
+.text {
+    margin-top: 10px;
+    padding: 5px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.text>h5 {
+    font-size: 14px;
+}
+
+.text>p {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+.stars>p {
+    font-size: 54px;
+}
+
+.block2 {
+    margin: 50px 10px 10px 10px;    
+    display: flex;
+    justify-content: center;
+}
+
+.share {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: right;   
+}
+
+.share>img {
+    width: 50px;
+}
+
+.star2_onload {
+    font-size: 76px;
+    color: red;
+}

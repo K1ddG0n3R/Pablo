@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="../Biblios/jquery-3.6.3.min.js"></script>
+    <title>Papers</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header_btns">
+            <button id="x3_min" class="header_btn">Логотип</button>
+            <button id="chng_color" class="header_btn">Перекрасить</button>
+        </div>
+        <div class="container">
+            <div class="img">
+                <img src="https://wallpaperaccess.com/full/2848601.jpg" alt="">
+            </div>
+        </div>
+        <div class="block1">
+            <div class="pic">
+                <div class="image">
+                    <img id="kaif" src="https://cdn.mos.cms.futurecdn.net/2aipAM72aBPS7Ny4L2MeNn.jpg" alt="">
+                </div>
+                <div class="text for_add">
+                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
+                    <p id="abzac">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Neque et, esse minus deserunt illum, ullam laboriosam ex nam</p>
+                </div>
+            </div>
+            <div class="stars">
+                <p><span class="star1">&#9733;</span> 
+                <span class="star2">&#9733;</span> 
+                <span class="star3">&#9733;</span></p>
+            </div>
+            <div class="pic">
+                <div class="image">
+                    <img  class="invise" src="https://crarena.ru/wp-content/uploads/2022/09/01a2dd1a53add60ceed019b99f009200.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h5>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Neque et, esse minus deserunt illum, ullam laboriosam ex nam</p>
+                </div>
+            </div>
+        </div>
+        <div class="block2">
+            <div class="pic">
+                <div class="text for_chng">
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, harum!</h5>
+                    <p class="for_del">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At necessitatibus soluta dolorum iste rem animi voluptatem hic aperiam, harum ipsum saepe veritatis deserunt esse?<br><br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque maxime impedit, laudantium consequatur omnis facilis dolore consequuntur? Dignissimos possimus suscipit unde iusto!</p>
+                </div>
+            </div>
+        </div>
+        <div class="share">
+            <img class="share_btn" src="https://cdn-icons-png.flaticon.com/512/52/52049.png?w=826&t=st=1675155544~exp=1675156144~hmac=cbe6759983167300e6e4563a433bdf892d3b64e8d9d8b0558637ba9e9b812de6" alt="">
+        </div>
+    </div>
+    
+
+    <script>
+        $(document).ready(function(){
+
+            // 1
+            $('#x3_min').click(function(){
+                alert('Вы нажали на логотип!');
+                $('#x3_min').animate({
+                    width: '33%',
+                    fontSize: '3em'
+                }, 1500);            
+            });
+            
+            // 2
+            let srcs = ['https://cdn.mos.cms.futurecdn.net/2aipAM72aBPS7Ny4L2MeNn.jpg', 'https://i.ytimg.com/vi/Go7SeJ-yOL4/maxresdefault.jpg'];
+            $('#kaif').click(function(){
+                clicknums++;
+                if(clicknums % 2 !== 0){
+                    document.querySelector('#kaif').setAttribute('src', srcs[1]);
+                }else{
+                    document.querySelector('#kaif').setAttribute('src', srcs[0]);
+                }
+            });
+
+            // 3
+            $('#abzac').click(function(){
+                $('.for_add').append($('<p>', {
+                    'text': 'Lorem, ipsum dolor sit amet consectetur adipisicing elit.',
+                    'class': 'added_text'
+                }));
+                $('.added_text').css('color', 'blue');
+            });
+
+            // 4
+            $('.for_chng > h5').click(function(){
+                $('.for_chng > h5').css('color', 'red');
+                $('.for_chng > h5').css('font-weight', '600');
+                $('.for_chng > h5').css('font-family', 'Arial');
+            });
+
+            // 5
+            $('.for_del').click(function(){
+                $('.for_del').remove();
+            })
+
+            // 6
+            let clicknums = 0;
+            $('#chng_color').click(function(){
+                clicknums++;
+                if(clicknums % 2 !== 0){
+                    $('#chng_color').css('background-color', 'green')
+                }else{
+                    $('#chng_color').css('background-color', 'rgb(56, 56, 56)')
+                }
+            });
+
+            // 7
+            $('.container > .img').click(function(){
+                $('.container > .img').hide(1000, function(){
+                    setTimeout(() => {
+                        $('.container > .img').show(1000);
+                    }, 1000);
+                });
+            });
+
+            // 8
+            $('.invise').click(function(){
+                $('.invise').animate({
+                    opacity: '0'
+                }, 2000);
+                $('.invise').animate({
+                    opacity: '1'
+                }, 2000);
+            })
+
+            // 9
+            $(window).on('load', function(){
+                $('.star1').animate({
+                    opacity: '0'
+                }, 1500);
+                $('.star2').addClass('star2_onload');
+                setInterval(() => {
+                    $('.star3').animate({
+                    fontSize: '76px', 
+                })
+                $('.star3').animate({
+                    fontSize: '54px', 
+                })
+                }, 1000);   
+            });
+
+            // 10
+            $('.share_btn').click(function(){
+                location.reload();
+                alert('Страница перезагружена');
+            })
+        });
+    </script>
+</body>
+</html>
