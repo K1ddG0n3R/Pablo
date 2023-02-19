@@ -40,7 +40,6 @@ $(document).ready(function(){
     $('.globe').click(function(){
         var sub_num = document.querySelector('.subscr_num');
         var num = Math.floor(Math.random() * (12000 - 1) + 1);
-        console.log(sub_num + ' ' + num)
         sub_num.textContent = num;
     })
 
