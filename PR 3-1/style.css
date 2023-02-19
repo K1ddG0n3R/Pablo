@@ -132,10 +132,27 @@
     width: 130px;
 }
 
-.inf > img {
+.inf > img,
+.globe > img {
     width: 120px;
     height: 120px;
 }
+
+.globe {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+     
+}
+
+.subscr_num {
+    margin: 32px 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: rgb(235, 83, 144);
+}
+
 
 .info_text > p {
     font-size: 12px;
